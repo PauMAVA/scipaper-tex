@@ -1,0 +1,121 @@
+% MIT License
+%
+% Copyright (c) [2022] [Pau Machetti Vallverdú]
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{scipaper}
+
+\title{Scipaper template example}
+
+\author{
+	First author\\\small @FirstHandle
+	\and
+	Second author\\\small @SecondHandle
+}
+
+\begin{document}
+	\maketitle
+	
+	\begin{strip}
+		\lipsum[1]
+	\end{strip}
+	
+	\begin{abstract}
+		\lipsum[2-3]
+	\end{abstract}
+
+	\tableofcontents
+
+	\section{Introduction}
+	\lipsum[4-7]
+	\section{Bullet list}
+	\begin{bulletlist}
+		First element
+		Second element
+		A really, really, long element that wraps the line into a new line automatically. Still going... A new wrap will occur soon...
+		Fourth element
+	\end{bulletlist}
+	\section{Check list}
+	\begin{checklist}
+		First element
+		Second element
+		A really, really, long element that wraps the line into a new line automatically. Still going... A new wrap will occur soon...
+		Fourth element
+	\end{checklist}
+	\section{Cross list}
+	\begin{crosslist}
+		First element
+		Second element
+		A really, really, long element that wraps the line into a new line automatically. Still going... A new wrap will occur soon...
+		Fourth element
+	\end{crosslist}
+	\section{Define}
+	\begin{define}{Cool concept}
+		\lipsum[1]
+	\end{define}
+	\section{Example}
+	\begin{example}{Cool example}
+		\lipsum[1]
+	\end{example}
+	\section{Titled box}
+	\begin{titledbox}{Custom title!}
+		\lipsum[1]
+	\end{titledbox}
+	\section{Code listing}
+	\begin{codelisting}{rust}
+		fn main() {
+			println!("{}", fib(32));
+		}
+	
+		fn fib(n: u32) -> u32 {
+			if (n == 1) {
+				n
+			} else {
+				fib(n - 2) + fib(n - 1)
+			} 
+		}
+	\end{codelisting}
+	\section{Code listing as figure}
+	\begin{code}{rust}{The fibonnaci sequence}
+		fn main() {
+			println!("{}", fib(32));
+		}
+		
+		fn fib(n: u32) -> u32 {
+			if (n == 1) {
+				n
+			} else {
+				fib(n - 2) + fib(n - 1)
+			} 
+		} 
+	\end{code}
+	\section{Strip}
+	\lipsum[1-3]
+	\begin{strip}
+		\lipsum[3-6]
+	\end{strip}
+	\lipsum[7-10]
+	\section{Strip with no rules}
+	\lipsum[1-3]
+	\begin{strip}[norule]
+		\lipsum[3-6]
+	\end{strip}
+	\lipsum[7-10]
+\end{document}
